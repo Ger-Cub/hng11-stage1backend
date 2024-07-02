@@ -68,9 +68,9 @@ app.get('/api/hello', async (req, res) => {
   try {
     
 
-      const location = clientCity.city || 'Goma';
+      const location = clientCity.city || 'New York';
   
-      const temperature = await getTemperatureByCity(location); 
+      const temperature = await getTemperatureByCity(location) || 11 ; 
   
       const response = {
         client_ip: clientIP,
